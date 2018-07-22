@@ -14,7 +14,7 @@ function getAllFunders() {
   for (var theme in data) {
     for (var year = startYear; year <= endYear; year++) {
       for (var i = 0; i < data[theme]['grants'][year].length; i++) {
-        if (data[theme]['grants'][year][i]['org'] !== 'ALL' && $.inArray(data[theme]['grants'][year][i]['org'], funders) === -1) {
+        if (data[theme]['grants'][year][i]['org'] !== 'All funders' && $.inArray(data[theme]['grants'][year][i]['org'], funders) === -1) {
           funders.push(data[theme]['grants'][year][i]['org']);
         }
       }

@@ -13,17 +13,17 @@ fakeNews = {
    },
   
   grants: {
-    2008: [ { org: 'ALL', amount: 0 } ],
-    2009: [ { org: 'ALL', amount: 0 }, ],
-    2010: [ { org: 'ALL', amount: 0 }, ],
-    2011: [ { org: 'ALL', amount: 0 }, ],
-    2012: [ { org: 'ALL', amount: 0 }, ],
-    2013: [ { org: 'ALL', amount: 0 }, ],
-    2014: [ { org: 'ALL', amount: 0 }, ],
-    2015: [ { org: 'ALL', amount: 0 }, ],
-    2016: [ { org: 'ALL', amount: 0 }, ],
+    2008: [ { org: 'All funders', amount: 0 } ],
+    2009: [ { org: 'All funders', amount: 0 }, ],
+    2010: [ { org: 'All funders', amount: 0 }, ],
+    2011: [ { org: 'All funders', amount: 0 }, ],
+    2012: [ { org: 'All funders', amount: 0 }, ],
+    2013: [ { org: 'All funders', amount: 0 }, ],
+    2014: [ { org: 'All funders', amount: 0 }, ],
+    2015: [ { org: 'All funders', amount: 0 }, ],
+    2016: [ { org: 'All funders', amount: 0 }, ],
     2017: [
-      { org: 'ALL', amount: 124000 },
+      { org: 'All funders', amount: 124000 },
       { org: 'The Wellcome Trust', amount: 124000 },
     ]
   }

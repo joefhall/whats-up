@@ -14,7 +14,7 @@ genderEquality = {
   
   grants: {
     2008: [
-      { org: "ALL", amount: 35057168.5 },
+      { org: "All funders", amount: 35057168.5 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 0 },
       { org: "BBC Children in Need", amount: 0 },
@@ -84,7 +84,7 @@ genderEquality = {
       { org: "Woodward Charitable Trust", amount: 6000 },
     ],
     2009: [
-      { org: "ALL", amount: 41360133 },
+      { org: "All funders", amount: 41360133 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 0 },
       { org: "BBC Children in Need", amount: 0 },
@@ -154,7 +154,7 @@ genderEquality = {
       { org: "Woodward Charitable Trust", amount: 25000 },
     ],
     2010: [
-      { org: "ALL", amount: 40596861.45 },
+      { org: "All funders", amount: 40596861.45 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 0 },
       { org: "BBC Children in Need", amount: 0 },
@@ -224,7 +224,7 @@ genderEquality = {
       { org: "Woodward Charitable Trust", amount: 7500 },
     ],
     2011: [
-      { org: "ALL", amount: 33843945.49 },
+      { org: "All funders", amount: 33843945.49 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 0 },
       { org: "BBC Children in Need", amount: 0 },
@@ -294,7 +294,7 @@ genderEquality = {
       { org: "Woodward Charitable Trust", amount: 5550 },
     ],
     2012: [
-      { org: "ALL", amount: 52239374.03 },
+      { org: "All funders", amount: 52239374.03 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 130100 },
       { org: "BBC Children in Need", amount: 0 },
@@ -364,7 +364,7 @@ genderEquality = {
       { org: "Woodward Charitable Trust", amount: 9840 },
     ],
     2013: [
-      { org: "ALL", amount: 62492248.26 },
+      { org: "All funders", amount: 62492248.26 },
       { org: "A B Charitable Trust", amount: 27500 },
       { org: "Barrow Cadbury Trust", amount: 87575 },
       { org: "BBC Children in Need", amount: 737229 },
@@ -434,7 +434,7 @@ genderEquality = {
       { org: "Woodward Charitable Trust", amount: 9300 },
     ],
     2014: [
-      { org: "ALL", amount: 58203007.87 },
+      { org: "All funders", amount: 58203007.87 },
       { org: "A B Charitable Trust", amount: 35000 },
       { org: "Barrow Cadbury Trust", amount: 309300 },
       { org: "BBC Children in Need", amount: 2162962 },
@@ -504,7 +504,7 @@ genderEquality = {
       { org: "Woodward Charitable Trust", amount: 3750 },
     ],
     2015: [
-      { org: "ALL", amount: 90132916.71 },
+      { org: "All funders", amount: 90132916.71 },
       { org: "A B Charitable Trust", amount: 17500 },
       { org: "Barrow Cadbury Trust", amount: 722724 },
       { org: "BBC Children in Need", amount: 1842950 },
@@ -574,7 +574,7 @@ genderEquality = {
       { org: "Woodward Charitable Trust", amount: 7500 },
     ],
     2016: [
-      { org: "ALL", amount: 146403771.76 },
+      { org: "All funders", amount: 146403771.76 },
       { org: "A B Charitable Trust", amount: 27500 },
       { org: "Barrow Cadbury Trust", amount: 288050 },
       { org: "BBC Children in Need", amount: 0 },
@@ -644,7 +644,7 @@ genderEquality = {
       { org: "Woodward Charitable Trust", amount: 4000 },
     ],
     2017: [
-      { org: "ALL", amount: 68600547.34 },
+      { org: "All funders", amount: 68600547.34 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 374470 },
       { org: "BBC Children in Need", amount: 0 },

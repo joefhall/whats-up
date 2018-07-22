@@ -14,7 +14,7 @@ mentalHealth = {
   
   grants: {
     2008: [
-      { org: "ALL", amount: 259190 },
+      { org: "All funders", amount: 259190 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 0 },
       { org: "BBC Children in Need", amount: 0 },
@@ -38,7 +38,7 @@ mentalHealth = {
       { org: "Lankelly Chase Foundation", amount: 0 },
     ],
     2009: [
-      { org: "ALL", amount: 399340 },
+      { org: "All funders", amount: 399340 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 0 },
       { org: "BBC Children in Need", amount: 0 },
@@ -62,7 +62,7 @@ mentalHealth = {
       { org: "Lankelly Chase Foundation", amount: 0 },
     ],
     2010: [
-      { org: "ALL", amount: 775915 },
+      { org: "All funders", amount: 775915 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 0 },
       { org: "BBC Children in Need", amount: 0 },
@@ -86,7 +86,7 @@ mentalHealth = {
       { org: "Lankelly Chase Foundation", amount: 0 },
     ],
     2011: [
-      { org: "ALL", amount: 1139754 },
+      { org: "All funders", amount: 1139754 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 0 },
       { org: "BBC Children in Need", amount: 0 },
@@ -110,7 +110,7 @@ mentalHealth = {
       { org: "Lankelly Chase Foundation", amount: 0 },
     ],
     2012: [
-      { org: "ALL", amount: 1346576 },
+      { org: "All funders", amount: 1346576 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 67400 },
       { org: "BBC Children in Need", amount: 0 },
@@ -134,7 +134,7 @@ mentalHealth = {
       { org: "Lankelly Chase Foundation", amount: 0 },
     ],
     2013: [
-      { org: "ALL", amount: 2398656 },
+      { org: "All funders", amount: 2398656 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 150000 },
       { org: "BBC Children in Need", amount: 507590 },
@@ -158,7 +158,7 @@ mentalHealth = {
       { org: "Lankelly Chase Foundation", amount: 0 },
     ],
     2014: [
-      { org: "ALL", amount: 6696685.15 },
+      { org: "All funders", amount: 6696685.15 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 135000 },
       { org: "BBC Children in Need", amount: 1670075 },
@@ -182,7 +182,7 @@ mentalHealth = {
       { org: "Lankelly Chase Foundation", amount: 389052 },
     ],
     2015: [
-      { org: "ALL", amount: 10411676.56 },
+      { org: "All funders", amount: 10411676.56 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 0 },
       { org: "BBC Children in Need", amount: 2605279 },
@@ -206,7 +206,7 @@ mentalHealth = {
       { org: "Lankelly Chase Foundation", amount: 68900 },
     ],
     2016: [
-      { org: "ALL", amount: 17169185.92 },
+      { org: "All funders", amount: 17169185.92 },
       { org: "A B Charitable Trust", amount: 20000 },
       { org: "Barrow Cadbury Trust", amount: 0 },
       { org: "BBC Children in Need", amount: 0 },
@@ -230,7 +230,7 @@ mentalHealth = {
       { org: "Lankelly Chase Foundation", amount: 1660343 },
     ],
     2017: [
-      { org: "ALL", amount: 10274217.89 },
+      { org: "All funders", amount: 10274217.89 },
       { org: "A B Charitable Trust", amount: 0 },
       { org: "Barrow Cadbury Trust", amount: 26988 },
       { org: "BBC Children in Need", amount: 0 },

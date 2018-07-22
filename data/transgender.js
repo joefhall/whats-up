@@ -14,7 +14,7 @@ transgender = {
   
   grants: {
     2008: [
-      { org: "ALL", amount: 251914 },
+      { org: "All funders", amount: 251914 },
       { org: "BBC Children in Need", amount: 0 },
       { org: "Cheshire Community Foundation", amount: 0 },
       { org: "Community Foundation serving Tyne & Wear and Northumberland", amount: 0 },
@@ -38,7 +38,7 @@ transgender = {
       { org: "Wolfson Foundation", amount: 0 },
     ],
     2009: [
-      { org: "ALL", amount: 0 },
+      { org: "All funders", amount: 0 },
       { org: "BBC Children in Need", amount: 0 },
       { org: "Cheshire Community Foundation", amount: 0 },
       { org: "Community Foundation serving Tyne & Wear and Northumberland", amount: 0 },
@@ -62,7 +62,7 @@ transgender = {
       { org: "Wolfson Foundation", amount: 0 },
     ],
     2010: [
-      { org: "ALL", amount: 80876 },
+      { org: "All funders", amount: 80876 },
       { org: "BBC Children in Need", amount: 0 },
       { org: "Cheshire Community Foundation", amount: 0 },
       { org: "Community Foundation serving Tyne & Wear and Northumberland", amount: 0 },
@@ -86,7 +86,7 @@ transgender = {
       { org: "Wolfson Foundation", amount: 0 },
     ],
     2011: [
-      { org: "ALL", amount: 1007678 },
+      { org: "All funders", amount: 1007678 },
       { org: "BBC Children in Need", amount: 0 },
       { org: "Cheshire Community Foundation", amount: 0 },
       { org: "Community Foundation serving Tyne & Wear and Northumberland", amount: 0 },
@@ -110,7 +110,7 @@ transgender = {
       { org: "Wolfson Foundation", amount: 0 },
     ],
     2012: [
-      { org: "ALL", amount: 3195812.96 },
+      { org: "All funders", amount: 3195812.96 },
       { org: "BBC Children in Need", amount: 0 },
       { org: "Cheshire Community Foundation", amount: 0 },
       { org: "Community Foundation serving Tyne & Wear and Northumberland", amount: 0 },
@@ -134,7 +134,7 @@ transgender = {
       { org: "Wolfson Foundation", amount: 0 },
     ],
     2013: [
-      { org: "ALL", amount: 1565765.5 },
+      { org: "All funders", amount: 1565765.5 },
       { org: "BBC Children in Need", amount: 0 },
       { org: "Cheshire Community Foundation", amount: 0 },
       { org: "Community Foundation serving Tyne & Wear and Northumberland", amount: 0 },
@@ -158,7 +158,7 @@ transgender = {
       { org: "Wolfson Foundation", amount: 0 },
     ],
     2014: [
-      { org: "ALL", amount: 546107 },
+      { org: "All funders", amount: 546107 },
       { org: "BBC Children in Need", amount: 0 },
       { org: "Cheshire Community Foundation", amount: 0 },
       { org: "Community Foundation serving Tyne & Wear and Northumberland", amount: 0 },
@@ -182,7 +182,7 @@ transgender = {
       { org: "Wolfson Foundation", amount: 0 },
     ],
     2015: [
-      { org: "ALL", amount: 1526952 },
+      { org: "All funders", amount: 1526952 },
       { org: "BBC Children in Need", amount: 246884 },
       { org: "Cheshire Community Foundation", amount: 0 },
       { org: "Community Foundation serving Tyne & Wear and Northumberland", amount: 0 },
@@ -206,7 +206,7 @@ transgender = {
       { org: "Wolfson Foundation", amount: 0 },
     ],
     2016: [
-      { org: "ALL", amount: 970157 },
+      { org: "All funders", amount: 970157 },
       { org: "BBC Children in Need", amount: 0 },
       { org: "Cheshire Community Foundation", amount: 0 },
       { org: "Community Foundation serving Tyne & Wear and Northumberland", amount: 2500 },
@@ -230,7 +230,7 @@ transgender = {
       { org: "Wolfson Foundation", amount: 0 },
     ],
     2017: [
-      { org: "ALL", amount: 3802357 },
+      { org: "All funders", amount: 3802357 },
       { org: "BBC Children in Need", amount: 0 },
       { org: "Cheshire Community Foundation", amount: 16420 },
       { org: "Community Foundation serving Tyne & Wear and Northumberland", amount: 0 },
