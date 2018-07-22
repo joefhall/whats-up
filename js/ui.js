@@ -4,7 +4,7 @@ current = {
   theme: null,
   funder: null
 };
-choiceHtml = '<div data-choice="[data-choice]" class="choice row"><div class="col-3"><div class="choice-image align-top"><img src="[image-src]"></div></div><div class="col-7 choice-text align-top"><div class="choice-title">[choice-title]</div><div class="choice-description">[choice-description]</div></div><img class="col-2 choice-arrow align-top" src="img/arrow-right.svg" alt="[arrow-alt]"></div>';
+choiceHtml = '<div data-choice="[data-choice]" class="choice row"><div class="col-3"><div class="choice-image align-top"><img src="[image-src]"></div></div><div class="col-7 choice-text"><div class="choice-title">[choice-title]</div></div><img class="col-2 choice-arrow align-top" src="img/arrow-right.svg" alt="[arrow-alt]"></div>';
 dividerHtml = '<div class="divider"></div>';
 
 function sizeColumns() {
@@ -37,7 +37,7 @@ function addChoices() {
   
   themeHtml = choiceHtml;
   themeHtml = themeHtml.replace('[data-choice]', 'about');
-  themeHtml = themeHtml.replace('[image-src]', 'img/' + 'about.jpg');
+  themeHtml = themeHtml.replace('[image-src]', 'img/themes/' + 'about.jpg');
   themeHtml = themeHtml.replace('[choice-title]', 'About');
   themeHtml = themeHtml.replace('[choice-description]', 'Blah blah blah');
   themeHtml = themeHtml.replace('[arrow-alt]', 'About');
@@ -47,7 +47,7 @@ function addChoices() {
   for (var theme in themes) {
     themeHtml = choiceHtml;
     themeHtml = themeHtml.replace('[data-choice]', theme);
-    themeHtml = themeHtml.replace('[image-src]', 'img/themes/' + themes[theme] + '.jpg');
+    themeHtml = themeHtml.replace('[image-src]', 'img/themes/' + theme + '.jpg');
     themeHtml = themeHtml.replace('[choice-title]', themes[theme]);
     themeHtml = themeHtml.replace('[choice-description]', '');
     themeHtml = themeHtml.replace('[arrow-alt]', themes[theme]);

@@ -74,7 +74,8 @@ h1 {
 }
 
 .choice-text {
-
+  display: flex;
+  align-items: center;
 }
 
 .choice-title {

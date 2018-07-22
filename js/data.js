@@ -6,10 +6,10 @@ endYear = 2017;
 allFunders = 'All funders';
 
 themes = {
-  fakeNews: 'Fake news',
   genderEquality: 'Gender equality',
   mentalHealth: 'Mental health',
-  transgender: 'Transgender'
+  transgender: 'Transgender',
+  fakeNews: 'Fake news'
 };
 
 function getAllFunders() {
