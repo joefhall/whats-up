@@ -11,6 +11,7 @@ body {
 
 #main-holder {
   max-height: 600px;
+  overflow: hidden;
   background-color: white;
 }
 
@@ -38,4 +39,15 @@ body {
 h1 {
   display: inline-block;
   font-size: 2em !important;
+}
+
+#swiping-holder {
+  
+}
+
+.swiping-column {
+  display: none;
+  float: left;
+  height: 100%;
+  overflow: scroll;
 }
