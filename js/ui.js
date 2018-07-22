@@ -114,6 +114,8 @@ function addChoices() {
           }, 500, function() {
             $('#choices-funders').show();
           });
+          
+          $('#back').css('visibility', 'hidden');
         } else {
           current.funder = null;
           current.column = 'funders';
