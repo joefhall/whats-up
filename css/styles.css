@@ -58,14 +58,19 @@ h1 {
 }
 
 .choice-image {
-  padding-left: 10px;
-  padding-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 65px;
+  height: 65px;
+  border: solid 1px #e5e5e5;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .choice-image img {
   width: 65px;
-  height: 65px;
-  border-radius: 50%;
+  height: auto;
 }
 
 .choice-text {
