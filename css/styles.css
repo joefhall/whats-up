@@ -41,13 +41,45 @@ h1 {
   font-size: 2em !important;
 }
 
-#swiping-holder {
-  
-}
-
 .swiping-column {
   display: none;
   float: left;
   height: 100%;
   overflow: scroll;
+}
+
+.choice {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #dbdbdb;
+  cursor: pointer;
+}
+
+.choice-image {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.choice-image img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+.choice-text {
+
+}
+
+.choice-title {
+  font-weight: bold;
+}
+
+.choice-description {
+  
+}
+
+.choice-arrow {
+
 }
