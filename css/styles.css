@@ -77,9 +77,14 @@ h1 {
 }
 
 .choice-description {
-  
+  font-size: 0.9rem;
 }
 
 .choice-arrow {
 
+}
+
+.divider {
+  height: 10px;
+  background-color: #f5f5f5;
 }

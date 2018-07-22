@@ -5,6 +5,7 @@ current = {
   funder: null
 };
 choiceHtml = '<div data-choice="[data-choice]" class="choice row"><div class="col-3 choice-image align-top"><img src="[image-src]"></div><div class="col-7 choice-text align-top"><div class="choice-title">[choice-title]</div><div class="choice-description">[choice-description]</div></div><img class="col-2 choice-arrow align-top" src="img/arrow-right.svg" alt="[arrow-alt]"></div>';
+dividerHtml = '<div class="divider"></div>';
 
 function sizeColumns() {
   columnWidth = $('#main-holder').width();
@@ -27,8 +28,21 @@ function addChoices() {
     funderHtml = funderHtml.replace('[choice-description]', '');
     funderHtml = funderHtml.replace('[arrow-alt]', funders[i]);
     
+    if (i === 0) {
+      funderHtml += dividerHtml;
+    }
+    
     fundersHtml += funderHtml;
   }
+  
+  themeHtml = choiceHtml;
+  themeHtml = themeHtml.replace('[data-choice]', 'about');
+  themeHtml = themeHtml.replace('[image-src]', 'img/' + 'about.png');
+  themeHtml = themeHtml.replace('[choice-title]', 'About');
+  themeHtml = themeHtml.replace('[choice-description]', 'Blah blah blah');
+  themeHtml = themeHtml.replace('[arrow-alt]', 'About');
+  themeHtml += dividerHtml;
+  themesHtml += themeHtml;
   
   for (var theme in themes) {
     themeHtml = choiceHtml;
@@ -48,13 +62,19 @@ function addChoices() {
     switch (current.column) {
       case 'themes':
         current.theme = $(this).attr('data-choice');
-        current.column = 'funders';
         
-        $('#choices-funders').scrollTop(0);
+        if (current.theme === 'about') {
+          current.column = 'chat';
+        
+          $('#choices-funders').hide();
+        } else {
+          current.column = 'funders';
+          $('#choices-funders').scrollTop(0);
+        }
+        
         $('#swiping-holder').animate({
           left: - columnWidth
         }, 500);
-        
         $('#back').css('visibility', 'visible');
         break;
         
@@ -85,12 +105,23 @@ function addChoices() {
         break;
         
       case 'chat':
-        current.funder = null;
-        current.column = 'funders';
-        
-        $('#swiping-holder').animate({
-          left: - columnWidth
-        }, 500);
+        if (current.theme === 'about') {
+          current.theme = null;
+          current.column = 'themes';
+          
+          $('#swiping-holder').animate({
+            left: 0
+          }, 500, function() {
+            $('#choices-funders').show();
+          });
+        } else {
+          current.funder = null;
+          current.column = 'funders';
+          
+          $('#swiping-holder').animate({
+            left: - columnWidth
+          }, 500);
+        }
         break;
     }
   });
