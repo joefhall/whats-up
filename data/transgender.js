@@ -35,7 +35,6 @@ transgender = {
       { org: "The Robertson Trust", amount: 0 },
       { org: "The Tudor Trust", amount: 0 },
       { org: "The Wellcome Trust", amount: 7508 },
-      { org: "Wolfson Foundation", amount: 0 },
     ],
     2009: [
       { org: "All funders", amount: 0 },
@@ -59,7 +58,6 @@ transgender = {
       { org: "The Robertson Trust", amount: 0 },
       { org: "The Tudor Trust", amount: 0 },
       { org: "The Wellcome Trust", amount: 0 },
-      { org: "Wolfson Foundation", amount: 0 },
     ],
     2010: [
       { org: "All funders", amount: 80876 },
@@ -83,7 +81,6 @@ transgender = {
       { org: "The Robertson Trust", amount: 0 },
       { org: "The Tudor Trust", amount: 0 },
       { org: "The Wellcome Trust", amount: 4968 },
-      { org: "Wolfson Foundation", amount: 0 },
     ],
     2011: [
       { org: "All funders", amount: 1007678 },
@@ -107,7 +104,6 @@ transgender = {
       { org: "The Robertson Trust", amount: 0 },
       { org: "The Tudor Trust", amount: 0 },
       { org: "The Wellcome Trust", amount: 0 },
-      { org: "Wolfson Foundation", amount: 0 },
     ],
     2012: [
       { org: "All funders", amount: 3195812.96 },
@@ -131,7 +127,6 @@ transgender = {
       { org: "The Robertson Trust", amount: 0 },
       { org: "The Tudor Trust", amount: 0 },
       { org: "The Wellcome Trust", amount: 151122 },
-      { org: "Wolfson Foundation", amount: 0 },
     ],
     2013: [
       { org: "All funders", amount: 1565765.5 },
@@ -155,7 +150,6 @@ transgender = {
       { org: "The Robertson Trust", amount: 0 },
       { org: "The Tudor Trust", amount: 0 },
       { org: "The Wellcome Trust", amount: 8560 },
-      { org: "Wolfson Foundation", amount: 0 },
     ],
     2014: [
       { org: "All funders", amount: 546107 },
@@ -179,7 +173,6 @@ transgender = {
       { org: "The Robertson Trust", amount: 0 },
       { org: "The Tudor Trust", amount: 90000 },
       { org: "The Wellcome Trust", amount: 0 },
-      { org: "Wolfson Foundation", amount: 0 },
     ],
     2015: [
       { org: "All funders", amount: 1526952 },
@@ -203,7 +196,6 @@ transgender = {
       { org: "The Robertson Trust", amount: 0 },
       { org: "The Tudor Trust", amount: 0 },
       { org: "The Wellcome Trust", amount: 40712 },
-      { org: "Wolfson Foundation", amount: 0 },
     ],
     2016: [
       { org: "All funders", amount: 970157 },
@@ -227,7 +219,6 @@ transgender = {
       { org: "The Robertson Trust", amount: 29000 },
       { org: "The Tudor Trust", amount: 2000 },
       { org: "The Wellcome Trust", amount: 54990 },
-      { org: "Wolfson Foundation", amount: 0 },
     ],
     2017: [
       { org: "All funders", amount: 3802357 },
@@ -251,7 +242,6 @@ transgender = {
       { org: "The Robertson Trust", amount: 49500 },
       { org: "The Tudor Trust", amount: 46204 },
       { org: "The Wellcome Trust", amount: 1602640 },
-      { org: "Wolfson Foundation", amount: 0 },
     ]
   }
 };

@@ -22,11 +22,10 @@ function addChoices() {
   
   for (var i = 0; i < funders.length; i++) {
     funderHtml = choiceHtml;
-    funderHtml = funderHtml.replace('[data-choice]', funders[i]);
-    funderHtml = funderHtml.replace('[image-src]', 'img/funders/' + funders[i] + '.jpg');
-    funderHtml = funderHtml.replace('[choice-title]', funders[i]);
-    funderHtml = funderHtml.replace('[choice-description]', '');
-    funderHtml = funderHtml.replace('[arrow-alt]', funders[i]);
+    funderHtml = funderHtml.replace('[data-choice]', funders[i].name);
+    funderHtml = funderHtml.replace('[image-src]', 'img/funders/' + funders[i].name + '.jpg');
+    funderHtml = funderHtml.replace('[choice-title]', funders[i].name);
+    funderHtml = funderHtml.replace('[arrow-alt]', funders[i].name);
     
     if (i === 0) {
       funderHtml += dividerHtml;
@@ -39,7 +38,6 @@ function addChoices() {
   themeHtml = themeHtml.replace('[data-choice]', 'about');
   themeHtml = themeHtml.replace('[image-src]', 'img/themes/' + 'about.jpg');
   themeHtml = themeHtml.replace('[choice-title]', 'About');
-  themeHtml = themeHtml.replace('[choice-description]', 'Blah blah blah');
   themeHtml = themeHtml.replace('[arrow-alt]', 'About');
   themeHtml += dividerHtml;
   themesHtml += themeHtml;
