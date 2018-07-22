@@ -1,4 +1,5 @@
 columnWidth = null;
+columnHeight = null;
 current = {
   column: 'themes',
   theme: null,
@@ -11,6 +12,11 @@ function sizeColumns() {
   columnWidth = $('#main-holder').width();
   $('#swiping-holder').width(columnWidth * 3);
   $('.swiping-column').width(columnWidth);
+  columnHeight = $('#main-holder').outerHeight() - $('#title-bar').outerHeight();
+  $('#swiping-holder').height(columnHeight);
+  $('.swiping-column').height(columnHeight);
+  $('#chat').height(columnHeight);
+  $('#chat-holder').height(columnHeight - $('#chat-top').outerHeight() - 120);
   $('.swiping-column').show();
 }
 
@@ -82,7 +88,9 @@ function addChoices() {
         
         $('#swiping-holder').animate({
           left: - (columnWidth * 2)
-        }, 500);
+        }, 500, function() {
+          showChat();
+        });
         
         $('#back').css('visibility', 'visible');
         break;
@@ -111,6 +119,7 @@ function addChoices() {
             left: 0
           }, 500, function() {
             $('#choices-funders').show();
+            destroyChat();
           });
           
           $('#back').css('visibility', 'hidden');
@@ -120,7 +129,9 @@ function addChoices() {
           
           $('#swiping-holder').animate({
             left: - columnWidth
-          }, 500);
+          }, 500, function() {
+            destroyChat();
+          });
         }
         break;
     }

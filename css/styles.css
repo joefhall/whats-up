@@ -41,6 +41,11 @@ h1 {
   font-size: 2em !important;
 }
 
+#typing {
+  min-height: 20px;
+  font-size: 0.8rem;
+}
+
 .swiping-column {
   display: none;
   float: left;
@@ -93,4 +98,98 @@ h1 {
 .divider {
   height: 10px;
   background-color: #f5f5f5;
+}
+
+#chat {
+  padding-bottom: 40px;
+}
+
+#chat-top {
+  padding-top: 10px;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+#chat-holder {
+  overflow: scroll;
+}
+
+#chat-image-theme-holder {
+  padding-left: 0 !important;
+}
+
+.chat-image {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 45px;
+  height: 45px;
+  border: solid 1px #e5e5e5;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.chat-image img {
+  width: 45px;
+  height: auto;
+}
+
+#chat-funder, #chat-theme {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.speech-bubble {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  margin: 10px auto;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+}
+
+.speech-bubble-left {
+  background-color: #feffd1;
+}
+
+.speech-bubble-right {
+  background-color: #dcf7c6;
+  text-align: right;
+}
+
+.speech-bubble-left:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid #feffd1;
+  border-top: 15px solid #feffd1;
+  border-bottom: 15px solid transparent;
+  left: -16px;
+  top: 0px;
+}
+
+.speech-bubble-right:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 15px solid #dcf7c6;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #dcf7c6;
+  border-bottom: 15px solid transparent;
+  right: -16px;
+  top: 0px;
+}
+
+.year {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  min-height: 20px;
 }
