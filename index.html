@@ -6,7 +6,7 @@
   <title>What's Up? - Grant giving compared with public discussion - 360 Giving data visualisation challenge</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link href="https://fonts.googleapis.com/css?family=Kanit:100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
@@ -18,19 +18,25 @@
 </head>
 <body>
   
-  <div class="container-fluid h-100">
+  <div class="container-fluid h-100 px-0">
     
-    <div class="row w-100 h-100 justify-content-center align-items-center">
-      <div id="main-holder" class="col-xs-12">
+    <div class="row w-100 h-100 justify-content-center align-items-center mx-0">
+      <div id="main-holder" class="col-12 col-sm-8 col-md-4 col-xl-3 w-100 h-100 px-0 border border-light rounded">
+        <div id="title-bar" class="pt-4 pb-3 text-center">
+          <img id="logo" class="mb-1 mr-3 align-middle" src="img/whats-up-logo.png" alt="What's Up logo">
+          <h1 class="align-middle">
+            What's Up?!
+          </h1>
+        </div>
         
       </div>
-      
-      <div id="credits" class="px-2">
-        Visualisation by Joe Hall, licensed under Creative Commons Attribution 4.0, <a href="https://github.com/joefhall/whats-up" target="_blank">find code on GitHub.</a>
-        2008-2017 data, grants in British Pounds, from <a href="http://grantnav.threesixtygiving.org/" target="_blank">360 Giving Grant Nav.</a> 
-      </div>
     </div>
-
+      
+  </div>
+  
+  <div id="credits" class="px-2">
+    Visualisation by Joe Hall, licensed under Creative Commons Attribution 4.0, <a href="https://github.com/joefhall/whats-up" target="_blank">find code on GitHub.</a>
+    2008-2017 data, grants in British Pounds, from <a href="http://grantnav.threesixtygiving.org/" target="_blank">360 Giving Grant Nav.</a> 
   </div>
   
 </body>
