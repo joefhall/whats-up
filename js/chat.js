@@ -5,7 +5,8 @@ bubbleDelay = {
   genderEquality: 1500,
   mentalHealth: 1500,
   transgender: 1500,
-  fakeNews: 1500
+  fakeNews: 1500,
+  pause: 850
 };
 intervalTimer = null;
 
@@ -72,42 +73,76 @@ aboutText = [
   },
 ];
 
+function typingText() {
+  var fundingTyping = current.funder + ((current.funder === allFunders) ? ' are typing...' : ' is typing...');
+  var publicTyping = 'The public are typing...';
+  var whatsUpTyping = 'What\'s Up? is typing...';
+  var text = '';
+  
+  if (bubble < chat.length - 1) {
+    if (chat[bubble + 1].hasOwnProperty('grant')) {
+      text = fundingTyping;
+    } else if (chat[bubble + 1].hasOwnProperty('popularity')) {
+      text = publicTyping;
+    } else if (chat[bubble + 1].hasOwnProperty('about')) {
+      text = whatsUpTyping;
+    }
+  }
+  
+  return text;
+}
+
 function addBubble(bubbleData) {
   var speechBubble = '';
   var yearDivider = '';
   var popularityEmojis = '';
   var grantEmojis = '';
   
-  if (bubbleData.hasOwnProperty('pause')) {
+  if (bubbleData.hasOwnProperty('yearDivider')) {
     yearDivider = yearHtml;
     yearDivider = yearDivider.replace('[year]', bubbleData.year);
     $('#chat-holder').append(yearDivider);
-    
-    $('#typing').text('The public are typing...');
+  } else if (bubbleData.hasOwnProperty('pause')) {
+
   } else if (bubbleData.hasOwnProperty('popularity')) {
     speechBubble = speechBubbleHtml.right;
     popularityEmojis = bubbleData.popularity > 0 ? talking.yes.repeat(bubbleData.popularity) : talking.no;
     speechBubble = speechBubble.replace('[text]', popularityEmojis);
     speechBubble = speechBubble.replace('[classes]', '');
-    
-    $('#typing').text(current.funder + ((current.funder === allFunders) ? ' are typing...' : ' is typing...'));
   } else if (bubbleData.hasOwnProperty('grant')) {
     speechBubble = speechBubbleHtml.left;
     grantEmojis = bubbleData.grant > 0 ? money.yes.repeat(bubbleData.grant) : money.no;
     speechBubble = speechBubble.replace('[text]', grantEmojis);
     speechBubble = speechBubble.replace('[classes]', '');
-    
-    $('#typing').text('');
   } else if (bubbleData.hasOwnProperty('about')) {
     speechBubble = speechBubbleHtml.right;
     speechBubble = speechBubble.replace('[text]', bubbleData.about);
     speechBubble = speechBubble.replace('[classes]', 'speech-bubble-about');
-    
-    $('#typing').text(bubble < (chat.length - 1) ? 'What\'s Up? is typing...' : '');
   }
   
-  $('#chat-holder').append(speechBubble);
+  $('#typing').text(typingText());
+  
+  if (speechBubble !== '') {
+    $('#chat-holder').append(speechBubble); 
+  }
+  
   $('#chat-holder').scrollTop($('#chat-holder')[0].scrollHeight);
+}
+
+function nextBubble() {
+  if (bubble < chat.length) {
+    addBubble(chat[bubble]);
+    bubble += 1;
+    intervalTimer = setTimeout(nextBubble, bubbleTiming());
+  } else {
+    clearTimeout(intervalTimer);
+  }
+}
+
+function bubbleTiming() {
+  var timing = (bubble < chat.length && chat[bubble].hasOwnProperty('pause')) ? chat[bubble].pause : bubbleDelay[current.theme];
+  
+  return timing;
 }
 
 function stopChat() {
@@ -134,14 +169,7 @@ function showChat() {
     bubble = 1;
   }
   
-  intervalTimer = setInterval(function() {
-    if (bubble < chat.length) {
-      addBubble(chat[bubble]);
-      bubble += 1;
-    } else {
-      clearInterval(intervalTimer);
-    }
-  }, bubbleDelay[current.theme]);
+  intervalTimer = setTimeout(nextBubble, bubbleTiming());
 }
 
 function getChatData() {
@@ -150,7 +178,10 @@ function getChatData() {
   var funderBiggestGrant;
   var yearGrant = {};
   var yearPopularity = {};
-  var pause = {};
+  var yearDivider = {};
+  var pause = {
+    'pause': bubbleDelay.pause
+  };
   
   if (current.theme === 'about') {
     chat = aboutText;
@@ -168,12 +199,12 @@ function getChatData() {
         year: i,
         popularity: null
       };
-      pause = {
+      yearDivider = {
         year: i,
-        pause: 'pause'
+        yearDivider: 'yearDivider'
       }
 
-      chat.push(pause);
+      chat.push(yearDivider);
 
       grants = data[current.theme].grants[i];
 
@@ -192,7 +223,9 @@ function getChatData() {
 
       yearPopularity.popularity = Math.round(data[current.theme].popularity[i] / 20);
 
+      chat.push(pause);
       chat.push(yearPopularity);
+      chat.push(pause);
       chat.push(yearGrant);
     }
   }
