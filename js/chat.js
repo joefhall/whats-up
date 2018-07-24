@@ -17,12 +17,12 @@ speechBubbleHtml = {
 yearHtml = '<div class="divider year my-2">[year]</div>';
 
 talking = {
-  'yes': '😛',
-  'no': '🤐'
+  'yes': '<img class="emoji" src="img/emoji-talking.png" alt="Emoji of face with tongue sticking out">',
+  'no': '<img class="emoji" src="img/emoji-no.png" alt="Emoji of face with zip across mouth">',
 };
 money = {
-  'yes': '🤑',
-  'no': '🤐'
+  'yes': '<img class="emoji" src="img/emoji-money.png" alt="Emoji of face with dollar bills on eyes and mouth">',
+  'no': '<img class="emoji" src="img/emoji-no.png" alt="Emoji of face with zip across mouth">',
 };
 
 aboutText = [
@@ -36,7 +36,7 @@ aboutText = [
     about: 'Did they follow the public? Lag behind? Ignore them completely?'
   },
   {
-    about: '<em>What\'s Up?</em> shows public interest in each issue, measured by Google search popularity (' + talking.yes + ') against grant funding to charities and others (' + money.yes + ')'
+    about: '<em>What\'s Up?</em> shows public interest in each issue, measured by Google search popularity ' + talking.yes + ' against grant funding to charities and others ' + money.yes
   },
     {
     about: '(If there was very little public interest or no funding that year, you\'ll see ' + money.no + ')'
@@ -45,10 +45,10 @@ aboutText = [
     about: 'It\'s important to know that each is a <em>relative</em> measure'
   },
   {
-    about: 'Each public interest bubble shows 1 to 5 <span class="text-nowrap">' + talking.yes.repeat(5) + '</span> for the popularity of that issue, relative to the popularity of all other Google searches that year'
+    about: 'Each public interest bubble shows up to five <div class="d-inline">' + talking.yes.repeat(5) + '</div> for the popularity of that issue, relative to the popularity of all other Google searches that year'
   },
   {
-    about: 'Each funding bubble shows 1 to 5 <span class="text-nowrap">' + money.yes.repeat(5) + '</span> for how much <em>that funder</em> gave for that issue, relative to the maximum they gave <em>for that issue</em> in any year'
+    about: 'Each funding bubble shows up to five <div class="d-inline">' + money.yes.repeat(5) + '</div> for how much <em>that funder</em> gave for that issue, relative to the maximum they gave <em>for that issue</em> in any year'
   },
   {
     about: '(Did funders give enough in absolute terms? This tool isn\'t designed to tell you that)'
@@ -66,10 +66,10 @@ aboutText = [
     about: 'Maybe funders just respond to the applications they get... or maybe funders should be pioneering rather than reacting?'
   },
   {
-    about: 'Hopefully the chat-style interface also brings to life the data in a fresh, simple, relevant and interesting way 😉'
+    about: 'Hopefully the chat-style interface also brings to life the data in a fresh, simple, relevant and interesting way <img class="emoji" src="img/emoji-wink.png" alt="Emoji of winking face">'
   },
   {
-    about: 'Scroll down to the bottom of the screen for credits, data sources and details. Thanks 👏'
+    about: 'Scroll down to the bottom of the screen for credits, data sources and details. Thanks <img class="emoji" src="img/emoji-clap.png" alt="Emoji of hands clapping">'
   },
 ];
 
@@ -102,8 +102,6 @@ function addBubble(bubbleData) {
     yearDivider = yearHtml;
     yearDivider = yearDivider.replace('[year]', bubbleData.year);
     $('#chat-holder').append(yearDivider);
-  } else if (bubbleData.hasOwnProperty('pause')) {
-
   } else if (bubbleData.hasOwnProperty('popularity')) {
     speechBubble = speechBubbleHtml.right;
     popularityEmojis = bubbleData.popularity > 0 ? talking.yes.repeat(bubbleData.popularity) : talking.no;
