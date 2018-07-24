@@ -26,25 +26,31 @@ money = {
 
 aboutText = [
   {
-    about: 'Welcome! <em>What\'s Up?</em> shows four issues that have risen up the public agenda in the last ten years'
+    about: 'Welcome! <em>What\'s Up?</em> features four issues that have risen up the public agenda in the last decade'
   },
   {
-    about: 'It compares public interest in that issue, measured by Google search popularity (' + talking.yes + ') against grant funding to charities and others (' + money.yes + ')'
+    about: 'Did grant funders lead the way supporting charities and groups working on these issues, before they got big public attention?'
   },
   {
-    about: 'Did funders lead the way on an issue ahead of public interest? Did they follow the public? Lag behind? Ignore them completely?'
+    about: 'Did they follow the public? Lag behind? Ignore them completely?'
   },
   {
-    about: 'It\'s important to know that each is a <em>relative</em> measure.'
+    about: '<em>What\'s Up?</em> shows public interest in each issue, measured by Google search popularity (' + talking.yes + ') against grant funding to charities and others (' + money.yes + ')'
+  },
+    {
+    about: '(If there was very little public interest or no funding that year, you\'ll see ' + money.no + ')'
   },
   {
-    about: 'Each public interest bubble shows 1 to 5 <span class="text-nowrap">' + talking.yes.repeat(5) + '</span> for the popularity of that issue, relative to the popularity of all other Google searches that year.'
+    about: 'It\'s important to know that each is a <em>relative</em> measure'
   },
   {
-    about: 'Each funding bubble shows 1 to 5 <span class="text-nowrap">' + money.yes.repeat(5) + '</span> for how much the funder gave for that issue, relative to the maximum they gave <em>for that issue</em> in any year.'
+    about: 'Each public interest bubble shows 1 to 5 <span class="text-nowrap">' + talking.yes.repeat(5) + '</span> for the popularity of that issue, relative to the popularity of all other Google searches that year'
   },
   {
-    about: '(Did funders give enough in absolute terms? This tool isn\'t designed to tell you that.)'
+    about: 'Each funding bubble shows 1 to 5 <span class="text-nowrap">' + money.yes.repeat(5) + '</span> for how much <em>that funder</em> gave for that issue, relative to the maximum they gave <em>for that issue</em> in any year'
+  },
+  {
+    about: '(Did funders give enough in absolute terms? This tool isn\'t designed to tell you that)'
   },
   {
     about: 'The aim is to provoke questions...'
