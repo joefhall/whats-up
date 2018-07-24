@@ -7,7 +7,7 @@ current = {
 };
 choiceHtml = '<div data-choice="[data-choice]" class="choice row"><div class="col-3"><div class="choice-image align-top"><img src="[image-src]"></div></div><div class="col-7 choice-text"><div class="choice-title">[choice-title]</div></div><img class="col-2 choice-arrow align-top" src="img/arrow-right.svg" alt="[arrow-alt]"></div>';
 dividerHtml = '<div class="divider"></div>';
-description = 'Does funding follow big emerging trends?';
+description = 'Does funding lead or follow emerging issues?';
 
 function sizeColumns() {
   columnWidth = $('#main-holder').width();

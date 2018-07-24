@@ -41,7 +41,21 @@ function getFunderBiggestGrant(funderName) {
     }
   }
   
-  return Math.max(...grants);
+  return Math.round(Math.max(...grants));
+}
+
+function getFunderThemeBiggestGrant(funderName, theme) {
+  var grants = [];
+  
+  for (var year = startYear; year <= endYear; year++) {
+    for (var i = 0; i < data[theme].grants[year].length; i++) {
+      if (data[theme].grants[year][i].org === funderName && data[theme].grants[year][i].amount > 0) {
+        grants.push(data[theme].grants[year][i].amount);
+      }
+    }
+  }
+  
+  return grants.length ? Math.round(Math.max(...grants)) : 0;
 }
 
 function getAllFunders() {
@@ -55,6 +69,7 @@ function getAllFunders() {
           funderName = data[theme].grants[year][i].org;
           funders.push({
             name: funderName,
+            averageGrant: getFunderAverageGrant(funderName),
             biggestGrant: getFunderBiggestGrant(funderName)
           });
         }
@@ -66,8 +81,13 @@ function getAllFunders() {
   
   funders.unshift({
     name: allFunders,
+    averageGrant: getFunderAverageGrant(allFunders),
     biggestGrant: getFunderBiggestGrant(allFunders)
   });
+  
+  for (var i = 0; i < funders.length; i++) {
+    funders[i].ratio = Math.round(funders[i].biggestGrant / funders[i].averageGrant * 10) / 10;
+  }
 }
 
 function objectInArray(haystack, needleProperty, needleValue) {

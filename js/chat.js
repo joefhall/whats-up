@@ -63,6 +63,7 @@ function showChat() {
   $('#chat-image-theme').attr('src', 'img/themes/' + current.theme + '.jpg');
   
   getChatData();
+  console.log(chat);
   
   intervalTimer = setInterval(function() {
     if (bubble < chat.length) {
@@ -76,12 +77,16 @@ function showChat() {
 
 function getChatData() {
   var grants;
+  var funderAverageGrant;
   var funderBiggestGrant;
+  var funderThemeBiggestGrant = getFunderThemeBiggestGrant(current.funder, current.theme);
+  console.log(funderThemeBiggestGrant);
   var yearGrant = {};
   var yearPopularity = {};
   var pause = {};
   
   for (var i = startYear; i <= endYear; i++) {
+    funderAverageGrant = 0;
     funderBiggestGrant = 0;
     yearGrant = {
       year: i,
@@ -102,17 +107,21 @@ function getChatData() {
     
     for (var j = 0; j < funders.length; j++) {
       if (funders[j].name === current.funder) {
+        funderAverageGrant = funders[j].averageGrant;
         funderBiggestGrant = funders[j].biggestGrant;
       }
     }
     
     for (j = 0; j < grants.length; j++) {
       if (grants[j].org === current.funder) {
-        yearGrant.grant = Math.ceil(grants[j].amount / funderBiggestGrant * 5);
+//         yearGrant.grant = Math.ceil(grants[j].amount / funderBiggestGrant * 5);
+//         yearGrant.grant = Math.ceil(grants[j].amount / (funderAverageGrant) * 5);
+        yearGrant.grant = funderThemeBiggestGrant > 0 ? Math.ceil(grants[j].amount / funderThemeBiggestGrant * 5) : 0;
+        yearGrant.actualGrant = Math.round(grants[j].amount);
       }
     }
     
-    yearPopularity.popularity = Math.ceil(data[current.theme].popularity[i] / 20);
+    yearPopularity.popularity = Math.round(data[current.theme].popularity[i] / 20);
     
     chat.push(yearPopularity);
     chat.push(yearGrant);
