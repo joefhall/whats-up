@@ -38,10 +38,10 @@ aboutText = [
     about: 'It\'s important to know that each is a <em>relative</em> measure.'
   },
   {
-    about: 'Each public interest bubble shows 1 to 5 ' + talking.yes + '\'s for the popularity of that issue, relative to the popularity of all other Google searches that year.'
+    about: 'Each public interest bubble shows 1 to 5 <span class="text-nowrap">' + talking.yes.repeat(5) + '</span> for the popularity of that issue, relative to the popularity of all other Google searches that year.'
   },
   {
-    about: 'Each funding bubble shows 1 to 5 ' + money.yes + '\'s for how much the funder gave for that issue, relative to the maximum they gave <em>for that issue</em> in any year.'
+    about: 'Each funding bubble shows 1 to 5 <span class="text-nowrap">' + money.yes.repeat(5) + '</span> for how much the funder gave for that issue, relative to the maximum they gave <em>for that issue</em> in any year.'
   },
   {
     about: '(Did funders give enough in absolute terms? This tool isn\'t designed to tell you that.)'
@@ -122,6 +122,11 @@ function showChat() {
   $('#chat-image-theme').attr('src', 'img/themes/' + current.theme + '.jpg');
   
   getChatData();
+  
+  if (current.theme === 'about') {
+    addBubble(chat[bubble]);
+    bubble = 1;
+  }
   
   intervalTimer = setInterval(function() {
     if (bubble < chat.length) {
