@@ -156,4 +156,8 @@ $(document).ready(function() {
 $(window).resize(function() {
   sizeColumns();
 });
+
+window.addEventListener('orientationchange', function() {
+  sizeColumns();
+}, false);
   

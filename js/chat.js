@@ -17,12 +17,12 @@ speechBubbleHtml = {
 yearHtml = '<div class="divider year my-2">[year]</div>';
 
 talking = {
-  'yes': '<img class="emoji" src="img/emoji-talking.png" alt="Emoji of face with tongue sticking out">',
-  'no': '<img class="emoji" src="img/emoji-no.png" alt="Emoji of face with zip across mouth">',
+  yes: '<img class="emoji" src="img/emoji-talking.png" alt="Emoji of face with tongue sticking out">',
+  no: '<img class="emoji" src="img/emoji-no.png" alt="Emoji of face with zip across mouth">',
 };
 money = {
-  'yes': '<img class="emoji" src="img/emoji-money.png" alt="Emoji of face with dollar bills on eyes and mouth">',
-  'no': '<img class="emoji" src="img/emoji-no.png" alt="Emoji of face with zip across mouth">',
+  yes: '<img class="emoji" src="img/emoji-money.png" alt="Emoji of face with dollar bills on eyes and mouth">',
+  no: '<img class="emoji" src="img/emoji-no.png" alt="Emoji of face with zip across mouth">',
 };
 
 aboutText = [
@@ -45,10 +45,10 @@ aboutText = [
     about: 'It\'s important to know that each is a <em>relative</em> measure'
   },
   {
-    about: 'Each public interest bubble shows up to five <div class="d-inline">' + talking.yes.repeat(5) + '</div> for the popularity of that issue, relative to the popularity of all other Google searches that year'
+    about: 'Each public interest bubble shows up to five <div class="d-inline">' + stringRepeat(talking.yes, 5) + '</div> for the popularity of that issue, relative to the popularity of all other Google searches that year'
   },
   {
-    about: 'Each funding bubble shows up to five <div class="d-inline">' + money.yes.repeat(5) + '</div> for how much <em>that funder</em> gave for that issue, relative to the maximum they gave <em>for that issue</em> in any year'
+    about: 'Each funding bubble shows up to five <div class="d-inline">' + stringRepeat(money.yes, 5) + '</div> for how much <em>that funder</em> gave for that issue, relative to the maximum they gave <em>for that issue</em> in any year'
   },
   {
     about: '(Did funders give enough in absolute terms? This tool isn\'t designed to tell you that)'
@@ -72,6 +72,16 @@ aboutText = [
     about: 'Scroll down to the bottom of the screen for credits, data sources and details. Thanks <img class="emoji" src="img/emoji-clap.png" alt="Emoji of hands clapping">'
   },
 ];
+
+function stringRepeat(text, number) {
+  var repeatedText = '';
+  
+  for (var i = 0; i < number; i++) {
+    repeatedText += text;
+  }
+  
+  return repeatedText;
+}
 
 function typingText() {
   var fundingTyping = current.funder + ((current.funder === allFunders) ? ' are typing...' : ' is typing...');
@@ -104,12 +114,12 @@ function addBubble(bubbleData) {
     $('#chat-holder').append(yearDivider);
   } else if (bubbleData.hasOwnProperty('popularity')) {
     speechBubble = speechBubbleHtml.right;
-    popularityEmojis = bubbleData.popularity > 0 ? talking.yes.repeat(bubbleData.popularity) : talking.no;
+    popularityEmojis = bubbleData.popularity > 0 ? stringRepeat(talking.yes, bubbleData.popularity) : talking.no;
     speechBubble = speechBubble.replace('[text]', popularityEmojis);
     speechBubble = speechBubble.replace('[classes]', '');
   } else if (bubbleData.hasOwnProperty('grant')) {
     speechBubble = speechBubbleHtml.left;
-    grantEmojis = bubbleData.grant > 0 ? money.yes.repeat(bubbleData.grant) : money.no;
+    grantEmojis = bubbleData.grant > 0 ? stringRepeat(money.yes, bubbleData.grant) : money.no;
     speechBubble = speechBubble.replace('[text]', grantEmojis);
     speechBubble = speechBubble.replace('[classes]', '');
   } else if (bubbleData.hasOwnProperty('about')) {

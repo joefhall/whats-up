@@ -41,7 +41,7 @@ function getFunderBiggestGrant(funderName) {
     }
   }
   
-  return Math.round(Math.max(...grants));
+  return Math.round(Math.max.apply(null, grants));
 }
 
 function getFunderThemeBiggestGrant(funderName, theme) {
@@ -55,7 +55,7 @@ function getFunderThemeBiggestGrant(funderName, theme) {
     }
   }
   
-  return grants.length ? Math.round(Math.max(...grants)) : 0;
+  return grants.length ? Math.round(Math.max.apply(null, grants)) : 0;
 }
 
 function getAllFunders() {
@@ -108,7 +108,17 @@ function sortByProperty(property) {
 }
 
 function arrayAverage(array) {
-  return array.reduce((a,b) => a + b) / array.length;
+  var sum = 0;
+  var nonZeroLength = 0;
+  
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] > 0) {
+      sum += array[i];
+      nonZeroLength += 1;
+    }
+  }
+
+  return sum / nonZeroLength;
 }
 
 $(document).ready(function() {
