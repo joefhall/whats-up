@@ -18,7 +18,6 @@ function sizeColumns() {
   $('.swiping-column').height(columnHeight);
   $('#chat').height(columnHeight);
   $('#chat-holder').height(columnHeight - $('#chat-top').outerHeight() - 120);
-  $('.swiping-column').show();
 }
 
 function addChoices() {

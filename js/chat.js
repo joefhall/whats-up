@@ -122,7 +122,6 @@ function showChat() {
   $('#chat-image-theme').attr('src', 'img/themes/' + current.theme + '.jpg');
   
   getChatData();
-  console.log(chat);
   
   intervalTimer = setInterval(function() {
     if (bubble < chat.length) {

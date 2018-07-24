@@ -47,7 +47,6 @@ h1 {
 }
 
 .swiping-column {
-  display: none;
   float: left;
   height: 100%;
   overflow: scroll;
