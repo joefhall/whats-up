@@ -72,6 +72,10 @@ function addChoices() {
           current.column = 'chat';
         
           $('#choices-funders').hide();
+          $('#chat-image-funder').parent().hide();
+          $('#typing').text('What\'s Up? is typing');
+          
+          showChat();
         } else {
           current.column = 'funders';
           $('#choices-funders').scrollTop(0);
@@ -113,6 +117,8 @@ function addChoices() {
         break;
         
       case 'chat':
+        stopChat();
+        
         if (current.theme === 'about') {
           current.theme = null;
           current.column = 'themes';
@@ -121,6 +127,7 @@ function addChoices() {
             left: 0
           }, 500, function() {
             $('#choices-funders').show();
+            $('#chat-image-funder').parent().show();
             destroyChat();
           });
           

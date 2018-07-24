@@ -186,10 +186,19 @@ h1 {
   top: 0px;
 }
 
+.speech-bubble-about {
+  width: 280px !important;
+  font-size: 0.8rem !important;
+}
+
 .year {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
   min-height: 20px;
+}
+
+#credits {
+  font-size: 0.7rem !important;
 }

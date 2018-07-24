@@ -68,9 +68,7 @@ function getAllFunders() {
             !objectInArray(funders, 'name', data[theme].grants[year][i].org)) {
           funderName = data[theme].grants[year][i].org;
           funders.push({
-            name: funderName,
-            averageGrant: getFunderAverageGrant(funderName),
-            biggestGrant: getFunderBiggestGrant(funderName)
+            name: funderName
           });
         }
       }
@@ -80,14 +78,8 @@ function getAllFunders() {
   funders = funders.sort(sortByProperty('name'));
   
   funders.unshift({
-    name: allFunders,
-    averageGrant: getFunderAverageGrant(allFunders),
-    biggestGrant: getFunderBiggestGrant(allFunders)
+    name: allFunders
   });
-  
-  for (var i = 0; i < funders.length; i++) {
-    funders[i].ratio = Math.round(funders[i].biggestGrant / funders[i].averageGrant * 10) / 10;
-  }
 }
 
 function objectInArray(haystack, needleProperty, needleValue) {
