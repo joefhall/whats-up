@@ -11,7 +11,7 @@ yearHtml = '<div class="divider year my-2">[year]</div>';
 
 talking = {
   'yes': '😛',
-  'no': '🤫'
+  'no': '🤐'
 };
 money = {
   'yes': '🤑',
